@@ -1,0 +1,35 @@
+<div class="col-sm-12">
+    <div class="card">
+        <form>
+            <div class="card-header">
+                <strong>Referente Prestito</strong>
+                <small>Form</small>
+            </div>
+            <div class="card-block">
+
+
+                <div class="form-group">
+                    <label for="quota">Quota partecipazione</label> <input type="number"
+                                                                           class="form-control" id="quota"
+                                                                           placeholder="Quota partecipazione"
+                                                                           value="{{practice?.VAT}}">
+                </div>
+
+                <dati_anagrafici></dati_anagrafici>
+
+                <dati_residenza></dati_residenza>
+
+                <dati_documento></dati_documento>
+
+                <div class="form-group">
+                    <label for="firma">Soggetto in possesso di firma digitale</label> <input type="checkbox"
+                                                                           class="form-control" id="firma"
+                                                                           placeholder="Firma digitale"
+                                                                           value="{{practice?.VAT}}">
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>

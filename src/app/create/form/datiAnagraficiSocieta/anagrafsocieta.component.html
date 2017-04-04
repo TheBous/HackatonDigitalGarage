@@ -1,0 +1,46 @@
+<div class="col-sm-12">
+    <div class="card">
+        <form>
+            <div class="card-header">
+                <strong>Dati anagrafici provvisori società</strong>
+                <small>Form</small>
+            </div>
+            <div class="card-block">
+
+                <div class="form-group">
+                    <label for="denominazione">Denominazione impresa</label> <input type="text"
+                                                                class="form-control" id="denominazione"
+                                                                value="{{practice?.company}}">
+                </div>
+                <div class="form-group">
+                    <label for="giuridica">Forma giuridica</label> <input type="text"
+                                                         class="form-control" id="giuridica"
+                                                          value="{{practice?.VAT}}">
+                </div>
+                <div class="form-group">
+                    <label for="CF">CF</label> <input type="text"
+                                                          class="form-control" id="CF"
+                                                          placeholder="Enter street, city, postal code and country"
+                                                          value="{{practice?.headquarters}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="capitale">Capitale sociale</label> <input type="text"
+                                                          class="form-control" id="capitale"
+                                                          value="{{practice?.headquarters}}">
+                </div>
+                <div class="form-group">
+                    <label for="numbersoci">Numero soci</label> <input type="number"
+                                                                          class="form-control" id="numbersoci"
+                                                                          value="{{practice?.headquarters}}">
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <button type="reset" class="btn btn-sm btn-danger">
+                    <i class="fa fa-ban"></i> Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

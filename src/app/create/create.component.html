@@ -1,0 +1,282 @@
+<div class="animated fadeIn">
+    <div class="row">
+
+        <div class="col-md-12 mb-2">
+            <!-- Nav tabs -->
+            <tabset>
+                <tab>
+                    <template tabHeading><i
+                            class="icon-list"></i> Applicant information
+                    </template>
+
+                    <!--<div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Personal</strong>
+                                <small>Form</small>
+                            </div>
+                            <div class="card-block">
+                                <form action="" method="post" enctype="multipart/form-data"
+                                      class="form-horizontal ">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 form-control-label">Username</label>
+                                        <div class="col-md-9">
+                                            <p class="form-control-static" >{{practice?.username}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3 form-control-label" for="text-input">Name</label>
+                                        <div class="col-md-9">
+                                            <p class="form-control-static" >{{practice?.name}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3 form-control-label" for="text-input">Surname</label>
+                                        <div class="col-md-9">
+                                            <p class="form-control-static" >{{practice?.surname}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3 form-control-label" for="text-input">Address</label>
+                                        <div class="col-md-9">
+                                            <p class="form-control-static" >{{practice?.address}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3 form-control-label" for="text-input">Fiscal Code</label>
+                                        <div class="col-md-9">
+                                            <p class="form-control-static" >{{practice?.fiscalCode}}</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Soggetto del prestito</strong>
+                        </div>
+                        <dati_anagrafici></dati_anagrafici>
+
+                        <dati_residenza></dati_residenza>
+
+                        <dati_documento></dati_documento>
+
+                        <altro></altro>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Soggetto proponente</strong>
+                        </div>
+                        <dati_anagrafici></dati_anagrafici>
+
+                        <dati_residenza></dati_residenza>
+
+                        <dati_documento></dati_documento>
+
+                        <altro></altro>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Composizione compagine sociale</strong>
+                        </div>
+                        <dati_anagrafici></dati_anagrafici>
+
+                        <dati_residenza></dati_residenza>
+
+                        <dati_documento></dati_documento>
+
+                        <altro></altro>
+                        <legale></legale>
+                        <operative></operative>
+                        <sceltaprestito></sceltaprestito>
+
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Contatti</strong>
+                        </div>
+                        <contatti></contatti>
+                        <ideainvestimento></ideainvestimento>
+                        <uploadfile></uploadfile>
+                        <anagrafsocieta></anagrafsocieta>
+                        <compaginesociale></compaginesociale>
+                        <anagraficaprogramma></anagraficaprogramma>
+                        <anagraficacontatto></anagraficacontatto>
+                        <referente></referente>
+                        <pianodiprestito></pianodiprestito>
+                        <referente></referente>
+                    </div>
+
+                </tab>
+                <tab>
+                    <template tabHeading><i
+                            class="icon-calculator"></i> Company Details
+                    </template>
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Select type of financing:</strong>
+                        </div>
+                        <div class="card-block">
+                            <button type="button" (click)="setCurrentView('Industrial')"
+                                    class="btn btn-secondary btn-lg btn-block">Industrial
+                            </button>
+                            <button type="button" (click)="setCurrentView('Social')"
+                                    class="btn btn-primary btn-lg btn-block">Social
+                            </button>
+                            <button type="button" (click)="setCurrentView('Agricultural')"
+                                    class="btn btn-success btn-lg btn-block">Agricultural
+                            </button>
+                        </div>
+                    </div>
+
+                    <div [ngSwitch]="currentView">
+                        <div *ngSwitchCase="'Industrial'">
+                            <!-- /.col -->
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <form>
+                                        <div class="card-header">
+                                            <strong>Industrial</strong>
+                                            <small>Form</small>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="form-group">
+                                                <label for="company">Company</label> <input type="text"
+                                                                                            class="form-control"
+                                                                                            id="company"
+                                                                                            placeholder="Enter your company name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="vat">VAT</label> <input type="text"
+                                                                                    class="form-control" id="vat"
+                                                                                    placeholder="PL1234567890">
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="reset" class="btn btn-sm btn-danger">
+                                                <i class="fa fa-ban"></i> Reset
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngSwitchCase="'Social'">
+                            <!-- /.col -->
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <form>
+                                        <div class="card-header">
+                                            <strong>Social</strong>
+                                            <small>Form</small>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="form-group">
+                                                <label for="company">Company</label> <input type="text"
+                                                                                            class="form-control"
+                                                                                            id="company"
+                                                                                            placeholder="Enter your company name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="vat">VAT</label> <input type="text"
+                                                                                    class="form-control" id="vat"
+                                                                                    placeholder="PL1234567890">
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="reset" class="btn btn-sm btn-danger">
+                                                <i class="fa fa-ban"></i> Reset
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngSwitchCase="'Agricultural'">
+                            <!-- /.col -->
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <form>
+                                        <div class="card-header">
+                                            <strong>Agricultural</strong>
+                                            <small>Form</small>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="form-group">
+                                                <label for="company">Company</label> <input type="text"
+                                                                                            class="form-control"
+                                                                                            id="company"
+                                                                                            placeholder="Enter your company name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="vat">VAT</label> <input type="text"
+                                                                                    class="form-control" id="vat"
+                                                                                    placeholder="PL1234567890">
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="reset" class="btn btn-sm btn-danger">
+                                                <i class="fa fa-ban"></i> Reset
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </tab>
+                <tab>
+                    <template tabHeading><i
+                            class="icon-file-text-o"></i> Description
+                    </template>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label" for="textarea-input">Describe your finance
+                            request</label>
+                        <div class="col-md-9">
+                            <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control"
+                                      placeholder="Content.." value="{{practice?.description}}"></textarea>
+                        </div>
+                    </div>
+                </tab>
+                <tab>
+                    <template tabHeading><i
+                            class="icon-cloud-upload"></i> Files Upload
+                    </template>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label" for="file-input">Identity card</label>
+                        <div class="col-md-9">
+                            <input type="file" id="file-input" name="file-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label" for="file-input">Fiscal code</label>
+                        <div class="col-md-9">
+                            <input type="file" id="file-input" name="file-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label" for="file-input">VAT</label>
+                        <div class="col-md-9">
+                            <input type="file" id="file-input" name="file-input">
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+            <button type="submit" class="btn btn-sm btn-primary">
+                <i class="fa fa-dot-circle-o"></i> Save
+            </button>
+            <button disabled type="submit" class="btn btn-sm btn-primary">
+                <i class="fa fa-dot-circle-o"></i> Send
+            </button>
+
+        </div>
+
+
+    </div>
+    <!--/.row-->
+</div>

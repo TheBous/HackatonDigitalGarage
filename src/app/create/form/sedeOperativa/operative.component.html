@@ -1,0 +1,50 @@
+<div class="col-sm-12">
+    <div class="card">
+        <form>
+            <div class="card-header">
+                <strong>Sede Operative</strong>
+                <small>Form</small>
+            </div>
+            <div class="card-block">
+
+                <div class="form-group">
+                    <label for="loco">Sede operativa in loco</label> <input type="checkbox"
+                                                                            class="form-control" id="loco">
+                </div>
+                <div class="form-group">
+                    <label for="indirizzo">Indirizzo</label> <input type="text"
+                                                                    class="form-control" id="indirizzo"
+                                                                    placeholder="PL1234567890"
+                                                                    value="{{practice?.VAT}}">
+                </div>
+                <div class="form-group">
+                    <label for="comune">Comune</label> <input type="text"
+                                                              class="form-control" id="comune"
+                                                              placeholder="Enter street, city, postal code and country"
+                                                              value="{{practice?.headquarters}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="inizio">Data iniziale</label> <input type="date"
+                                                                     class="form-control" id="inizio"
+                                                                     placeholder="Enter street, city, postal code and country"
+                                                                     value="{{practice?.headquarters}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="finale">Data finale</label> <input type="date"
+                                                                   class="form-control" id="finale"
+                                                                   placeholder="Enter street, city, postal code and country"
+                                                                   value="{{practice?.headquarters}}">
+                </div>
+
+
+            </div>
+            <div class="card-footer">
+                <button type="reset" class="btn btn-sm btn-danger">
+                    <i class="fa fa-ban"></i> Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

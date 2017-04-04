@@ -1,0 +1,29 @@
+<div class="col-sm-12">
+    <div class="card">
+        <form>
+            <div class="card-header">
+                <strong>Compagine Sociale</strong>
+                <small>Form</small>
+            </div>
+            <div class="card-block">
+
+                <div class="form-group">
+                    <label for="tiposocio">Tipologia socio</label> <input type="text"
+                                                                class="form-control" id="tiposocio"
+                                                                value="{{practice?.company}}">
+                </div>
+                <div class="form-group">
+                    <label for="quota">Quota di partecipazione</label> <input type="text"
+                                                         class="form-control" id="quota"
+                                                          value="{{practice?.VAT}}">
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <button type="reset" class="btn btn-sm btn-danger">
+                    <i class="fa fa-ban"></i> Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

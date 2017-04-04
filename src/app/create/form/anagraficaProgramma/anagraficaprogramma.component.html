@@ -1,0 +1,48 @@
+<div class="col-sm-12">
+    <div class="card">
+        <form>
+            <div class="card-header">
+                <strong>Anagrafica di Contatto</strong>
+                <small>Form</small>
+            </div>
+            <div class="card-block">
+
+                <div class="form-group">
+                    <label for="descrizioneProgramma">Descrizione programma di prestito</label> <textarea type="text"
+                                                                                                          class="form-control" id="descrizioneProgramma"
+                                                                                                          value="{{practice?.company}}"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div><label>Prestiti richiesti</label></div>
+                    <label for="ecb">ECB[€]</label> <input type="number"
+                                                           class="form-control" id="ecb"
+                                                           value="{{practice?.VAT}}">
+                    <label for="mn">MN[€]</label> <input type="number"
+                                                         class="form-control" id="mn"
+                                                         value="{{practice?.VAT}}">
+                </div>
+                <div class="form-group">
+                    <div><label>Spese gestione richieste</label></div>
+                    <label for="personaleinterno">Personale interno qualificato[€]</label> <input type="number"
+                                                                                                  class="form-control"
+                                                                                                  id="personaleinterno"
+                                                                                                  value="{{practice?.VAT}}">
+                    <label for="serviziaccessori">Servizi accessori[€]</label> <input type="number"
+                                                                                      class="form-control"
+                                                                                      id="serviziaccessori"
+                                                                                      value="{{practice?.VAT}}">
+                    <label for="consulenze">Consulenze[€]</label> <input type="number"
+                                                                         class="form-control" id="consulenze"
+                                                                         value="{{practice?.VAT}}">
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <button type="reset" class="btn btn-sm btn-danger">
+                    <i class="fa fa-ban"></i> Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

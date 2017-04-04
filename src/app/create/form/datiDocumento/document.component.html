@@ -1,0 +1,51 @@
+<div class="col-sm-12">
+    <div class="card">
+        <form>
+            <div class="card-header">
+                <strong>Documento</strong>
+                <small>Form</small>
+            </div>
+            <div class="card-block">
+
+                <div class="form-group">
+                    <label for="ric">Documento di riconoscimento</label> <input type="text"
+                                                                class="form-control" id="ric"
+                                                                placeholder="Enter your company name"
+                                                                value="{{practice?.company}}">
+                </div>
+                <div class="form-group">
+                    <label for="num">Numero documento</label> <input type="text"
+                                                                    class="form-control" id="num"
+                                                                    placeholder="PL1234567890" value="{{practice?.VAT}}">
+                </div>
+                <div class="form-group">
+                    <label for="ril"> Rilasciato da </label> <input type="text"
+                                                               class="form-control" id="ril"
+                                                               placeholder="Enter street, city, postal code and country"
+                                                               value="{{practice?.headquarters}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="scad"> Data Scadenza</label> <input type="text"
+                                                         class="form-control" id="scad"
+                                                         placeholder="Enter street, city, postal code and country"
+                                                         value="{{practice?.headquarters}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="ril"> Data Rilascio</label> <input type="text"
+                                                                     class="form-control" id="ril"
+                                                                     placeholder="Enter street, city, postal code and country"
+                                                                     value="{{practice?.headquarters}}">
+                </div>
+
+
+            </div>
+            <div class="card-footer">
+                <button type="reset" class="btn btn-sm btn-danger">
+                    <i class="fa fa-ban"></i> Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
